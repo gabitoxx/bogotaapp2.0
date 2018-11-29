@@ -1,0 +1,281 @@
+<%= render 'inavbar' %>
+
+<div class="container">
+
+  <div class="bg-index bg-img-2 text-center">
+    <div class="caption">
+      <br/><br/><br/><br/><br/><br/><br/><br/>
+      <span class="texto_imagen">Bienvenidos a BogotaApp</span>
+      <br/><br/><br/>
+      <span class="texto_imagen_titulo">Tus Eventos + info de inter&eacute;s de tu Localidad</span>
+    </div>
+  </div>
+
+  <div class="index_section text-center">
+    <br/><br/>
+    <div class="row">
+      <div class="col-sm-5">
+        <%= image_tag("logo_fedesoft.png", :alt => "rss feed", style:"height: 200px; width: 350px;") %>
+      </div>
+      <div class="col-sm-7">
+        Somos una iniciativa de Fedesoft para integrar a los vecinos de cada una de las 20 Localidades de nuestra hermosa ciudad
+      </div>
+    </div>
+    <br/><br/>
+  </div>
+
+  <div class="bg-index bg-img-1 text-center">
+    <div class="caption">
+      <br/><br/><br/><br/><br/><br/><br/><br/>
+      <span class="texto_imagen">BogotaApp, la App más Cachaca</span>
+      <br/><br/><br/>
+      <span class="">
+        <%= link_to 'Quiero crear mi cuenta', signup_path(), {:style=>'font-size: 30px;', :class => "btn btn-lg btn-primary "} %>
+      </span>
+      <br/><br/>
+      <span class="texto_imagen_titulo">¿Quieres saber más? Mira abajo...</span>
+    </div>
+  </div>
+
+  <br/><br/><br/>
+  <div class="container-fluid bg-grey">
+    <div class="row">
+      <div class="col-sm-5">
+        <%= image_tag("cachacos_dsh.jpg", :alt => "rss feed", style:"height: 200px; width: 350px;") %>
+      </div>
+      <div class="col-sm-7">
+        <h4 class="text-center"><strong>Solo para Cachacos</strong></h4><br/>
+        <p>
+          Aquí podrás conocer nuevos vecinos, postear comunicaciones de interés local,
+          crear Denuncias públicas o anónimas de lo que acontece en tu localidad,
+          generar Eventos para que todos los cercanos a ti asistan, y más....
+        </p>
+      </div>
+    </div>
+  </div>
+  
+  <br/><br/><br/>
+  <div class="container-fluid bg-grey">
+    <div class="row">
+      <div class="col-sm-7">
+        <h4 class="text-center"><strong>Info de Interés</strong></h4><br/>
+        <p>
+          Solo de tu Localidad, lo cercano a tí. Conoce los horarios de las Notarias
+          cercanas, ubicaciones de Museos, Puntos de encuentro en caso de evacuaciones,
+          y también Servicios provistos por tus vecinos: se pasean mascotas, se cuidan niños, 
+          se imparten clases de matemáticas, y mucho más...
+        </p>
+      </div>
+      <div class="col-sm-5">
+        <%= image_tag("milocalidadservicios.jpg", :alt => "rss feed", style:"height: 200px; width: 350px;") %>
+      </div>
+    </div>
+  </div>
+
+  <br/><br/><br/>
+  <div class="bg-index bg-img-3 text-center">
+    <div class="caption">
+      <br/><br/><br/><br/><br/><br/><br/><br/>
+      <span class="texto_imagen">BogotaApp, de qué trata?...</span>
+    </div>
+  </div>
+
+  <!-- Container (Services Section) -->
+  <div id="services" class="container-fluid text-center">
+    <br>
+    <div class="row slideanim">
+      <div class="col-sm-4">
+        <%= image_tag("asterisk.jpg", :alt => "rss feed") %>
+        <h4>Tu localidad</h4>
+        <p>
+          Al ingresar, solo te haremos llegar la información de tu Localidad;
+          así te enterarás de solo lo cercano a tí (Opcional: podrás priorizar alguna de 
+          las UPZ de tu Localidad).
+        </p>
+      </div>
+      <div class="col-sm-4">
+        <%= image_tag("user1.jpg", :alt => "rss feed") %>
+        <h4>Eventos y Contactos</h4>
+        <p>
+          Podrás hacer nuevos amigos, conocer a tus vecinos, gente nueva de tu cuadra, convocar Eventos como torneos locales de futbol-5, reuniones de propietarios, jornadas ambientalistas y mucho más.
+        </p>
+      </div>
+      <div class="col-sm-4">
+        <%= image_tag("cross.jpg", :alt => "rss feed") %>
+        <h4>Información local</h4>
+        <p>
+          De tu completo interés, solo lo cercano a ti: teléfonos de los cuadrantes
+          de la Policía, Puntos de encuentros, Notarias cercanas, etc. 
+          Podrás añadir información de interés general. 
+        </p>
+      </div>
+    </div>
+    
+    <br><br>
+    
+    <div class="row slideanim">
+      <div class="col-sm-4">
+        <%= image_tag("qr1.jpg", :alt => "rss feed") %>
+        <h4>Anuncios locales</h4>
+        <p>
+          El pizzero de la esquina, la sra. que cose ropa de la cuadra,
+          el maestro de obra de enfrente... Y así por el estilo.
+        </p>
+      </div>
+      <div class="col-sm-4">
+        <%= image_tag("edit1.jpg", :alt => "rss feed") %>
+        <h4>Tus Mensajes, tus Anuncios</h4>
+        <p>
+          Podrás expresarte y lo leerá toda tu Localidad. También ofrecer tus servicios, si eres de los que desean 
+          rebuscarse. Por ejemplo: si das clases de física para bachilleres, 
+          anunciate aquí y te verán los de la cuadra. 
+        </p>
+      </div>
+      <div class="col-sm-4">
+        <%= image_tag("eye_open.jpg", :alt => "rss feed") %>
+        <h4 style="color:#303030;">Denuncias</h4>
+        <p>
+          Podrás hacerlas tanto de forma Pública (con fotos de cómo 
+          dejaron la plaza después de la fiesta de anoche, por ejemplo)
+          o de forma Anónima (para asuntos más serios)
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <br/><br/> 
+  <span class="texto_imagen">BogotaApp, explora sus posibilidades:</span>
+  <br>
+
+  <div class="main"> 
+      <div class="row text-center">
+          <!-- TENTH EXAMPLE -->
+          <div class="view view-tenth col-sm-4">
+              <%= image_tag("1.jpg", :alt => "EVENTOS") %>
+              <div class="mask">
+                  <h2>Información Local</h2>
+                  <p>De tu completo interés, solo lo cercano a ti: Teléfonos de los cuadrantes
+                  de la Policía, Puntos de encuentros, Notarias cercanas, Juntas Administradoras Locales (JAL), y más</p>
+                  <a href="#" class="info">Leer más...</a>
+              </div>
+          </div>
+          <div class="view view-tenth col-sm-4">
+              <%= image_tag("2.png", :alt => "EVENTOS", style:"height: 250px; width: 250px;") %>
+              <div class="mask">
+                  <h2>Denuncias</h2>
+                  <p>"El Periodista eres tú": podrás hacerlas tanto de forma Pública (con fotos de cómo 
+                  dejaron la plaza después de la fiesta de anoche, por ejemplo)
+                   o de forma Anónima</p>
+                  <a href="#" class="info">Leer más...</a>
+              </div>
+          </div>
+      </div>
+      <div class="row">
+          <div class="view view-tenth col-sm-4">
+              <%= image_tag("3.jpg", :alt => "EVENTOS", style:"height: 250px; width: 250px;") %>
+              <div class="mask">
+                  <h2>Anuncios locales</h2>
+                  <p>El pizzero de la esquina, la sra. que cose ropa de la cuadra,
+                  el maestro de obra de enfrente, si das o quieres clases particulares de matemáticas...
+                  Y así por el estilo.</p>
+                  <a href="#" class="info">Leer más...</a>
+              </div>
+          </div>
+          <div class="view view-tenth col-sm-4">
+              <%= image_tag("4.jpg", :alt => "EVENTOS", style:"height: 250px; width: 250px;") %>
+              <div class="mask">
+                  <h2>Eventos Deportivos - culturales</h2>
+                  <p>El acontecer de las Actividades cercanas a tu barrio, y te las has perdido.
+                  Pues no más, está al tanto de lo que ocurre cerquita a tí.</p>
+                  <a href="#" class="info">Leer más...</a>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <br><br>
+
+  <div class="bg-index bg-img-4 text-center">
+    <div class="caption">
+      <br/><br/><br/><br/><br/><br/><br/><br/>
+      <span class="texto_imagen">
+        Ajá, ya me inscribí en BogotaApp,
+      </span>
+      <br/><br/><br/>
+      <span class="texto_imagen_titulo">¿qué puedo hacer ahora?</span>
+    </div>
+  </div>
+
+  <br/><br/><br/>
+  <div class="container-fluid bg-grey">
+    <div class="row">
+      <div class="col-sm-6">
+        <%= image_tag("timeline_ejemplo.png", :alt => "EVENTOS", style:"height: 450px; width: 500px;") %>
+      </div>
+      <div class="col-sm-6">
+        <ul>
+          <li>Genera <b>puntos</b> cada vez que ingreses a la app</li>
+          <li>Usa tus puntos para crear <b>Mensajes públicos</b> que podrá ver toda tu localidad</li>
+          <li><i>Si ves nuestros Anuncios, ganarás muchísimos puntos extras</i>i></li>
+          <li>
+            Crea <b>Convocatorias a Eventos locales</b>. ¿Deseas convocar a los vecinos 
+            a una competencia de volar cometas, o quizás un torneo local de futbol-5, 
+            tal vez aeróbicos en el parque o algún otro? Este es el lugar idóneo.
+          </li>
+          <li>Registra <b>Denuncias públicas o anónimas</b> de lo que acontece en tu sector</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="text-center">
+    <br/><br/>
+    <span class="">
+      <%= link_to 'Quiero crear mi cuenta en BogotApp', signup_path(), {:style=>'font-size: 30px;', :class => "btn btn-lg btn-primary "} %>
+    </span>
+  </div>
+  <br/><br/>
+  <%= render 'footer' %>
+</div>
+
+<script>
+  $(document).ready(function(){
+
+    // Initialize Tooltip
+    $('[data-toggle="tooltip"]').tooltip(); 
+
+    // Add smooth scrolling to all links in navbar + footer link
+    $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+      // Make sure this.hash has a value before overriding default behavior
+      if (this.hash !== "") {
+        // Prevent default anchor click behavior
+        event.preventDefault();
+
+        // Store hash
+        var hash = this.hash;
+
+        // Using jQuery's animate() method to add smooth page scroll
+        // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 900, function(){
+     
+          // Add hash (#) to URL when done scrolling (default click behavior)
+          window.location.hash = hash;
+        });
+      } // End if
+    });
+    
+    $(window).scroll(function() {
+      $(".slideanim").each(function(){
+        var pos = $(this).offset().top;
+
+        var winTop = $(window).scrollTop();
+          if (pos < winTop + 600) {
+            $(this).addClass("slide");
+          }
+      });
+    });
+  })
+</script>
+
+

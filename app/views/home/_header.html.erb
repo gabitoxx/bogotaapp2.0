@@ -1,0 +1,117 @@
+<div class="row">
+	<div class="col-sm-4 text-left">
+	  <%= image_tag("bogotaapp_logo_mano1.png", :alt => "Bogotáapp", style:"height: 120px; width: 120px;") %>
+	  <br/>
+	  <i>Tu Localidad al alcance de un tap!</i>
+	</div>
+	<div class="col-sm-4 text-center">
+	  <%= image_tag("user1.jpg", :alt => "Bogotáapp", style:"height: 80px; width: 80px;") %>
+	  <br/>
+	  Avatar
+	  <br/>
+	  Alias: <i>por definir</i>
+	  <br/>
+	<%= image_tag("bogotaapp_points.png", :alt => "Settings", style:"height: 15px; width: 15px;") %> 
+	Puntos actuales: <b>35</b> - Histórico puntos: <i>152</i>
+	</div>
+	<div class="col-sm-4 text-right">
+	  Usuario: <b><i>Pepito Perez</i></b>
+	  <br/>
+	  Localidad: <b>Puente Aranda</b>
+	  <br/>
+	  Antiguedad en esta localidad: <b>2 meses</b>
+	  <p style="cursor: pointer;" onclick="javascript:config('Configura tu Perfil');">
+	    <%= image_tag("cog.png", :alt => "Settings", style:"height: 20px; width: 20px;") %> 
+	    Configuración de Cuenta
+	  </p>
+	</div>
+</div>
+
+<!-- Modal -->
+<div id="modalSettings" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+      	<div class="row">
+      		<div class="col-sm-12 text-center">
+		        <%= image_tag("cog.png", id: 'configcog', :alt => "configuraciones", style:"height: 100px; width: 100px;") %>
+		        <br/>
+		        <span id="modalSettings-message" class="text-center"></span>
+        	</div>
+        </div>
+        <br/>
+		Aquí podrá establecer valores por defecto, cambiar imgen de fondo, su Perfil e incluso hacer un 'Trasteo' de datos"
+		<br/><br/>
+		<b>Trasteo</b> = Mudanza de Localidad, la cual estará restringida a [ 1 mudanza al mes ], no será tan rápido el proceso de cambio de Localidad para evitar que las personas salten de una a la otra con facilidad.
+		<br/><br/>
+		Si deseas cambiarte de Localidad, selecciona otra a continuación:
+		<select style="font-size: 16px;" onchange="javascript:alertaCambioLocalidad();">
+            <option>-- elige una Localidad --</option>
+            <option>Antonio Nariño</option>
+          	<option>Barrios Unidos</option>
+			<option>Bosa</option>
+			<option>Ciudad Bolívar</option>
+			<option>Chapinero</option>
+			<option>Engativá</option>
+			<option>Fontibón</option>
+			<option>Kennedy</option>
+			<option>La Candelaria</option>
+			<option>Los Mártires</option>
+			<option selected="selected">Puente Aranda</option>
+			<option>Rafael Uribe Uribe</option>
+			<option>San Cristóbal</option>
+			<option>Santa Fe</option>
+			<option>Suba</option>
+			<option>Sumapaz</option>
+			<option>Teusaquillo</option>
+			<option>Tunjuelito</option>
+			<option>Usaquén</option>
+			<option>Usme</option>
+        </select>
+		
+		<br/><br/>
+
+		Mudanza de UPZ, elije otra si deseas cambiarte: 
+        <select style="font-size: 16px;">
+            <option selected="selected">Ciudad Montes</option>
+            <option>Muzú</option>
+            <option>Puente Aranda</option>
+            <option>San Rafael</option>
+            <option>Zona Industrial</option>
+        </select>
+		<br/><br/>
+
+		Fondo de la app: 
+		<a href="#" data-toggle="tooltip" data-placement="bottom" title="Elige el color que prefieras">Cambiar color</a>
+		&nbsp; | &nbsp;
+		<a href="#" data-toggle="tooltip" data-placement="bottom" title="Elige una imagen de fondo">Cambiar imagen</a>
+
+		<br/><br/>
+
+		Tamaño de Letra: <b>14</b> 
+		&nbsp; | &nbsp;
+		<a href="#" data-toggle="tooltip" data-placement="bottom" title="Elige el tamaño de Letra que desees">Cambiar</a>
+
+		<br/><br/>
+
+		Pestaña de Inicio: &nbsp; 
+		<select style="font-size: 18px;">
+            <option>Mensajes</option>
+            <option>Anuncios</option>
+            <option>Eventos</option>
+            <option>InfoLocal</option>
+            <option>Nuevo Mensaje</option>
+        </select>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Todo bien, parce</button>
+      </div>
+    </div>
+
+  </div>
+</div>

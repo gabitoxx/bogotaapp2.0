@@ -35,6 +35,23 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+
+# Se añadio la forma de descargar el Bootstrap como un Ruby Gems. gem:instal libreria / 2do parametro nombre de lib / igual o mayor la version q la 4.0
+gem 'bootstrap', '~> 4.0.0'
+
+# Bootstrap JavaScript depends on jQuery. If you're using Rails 5.1+, add the jquery-rails gem to your Gemfile
+gem 'jquery-rails'
+
+# Bootstarp pide: Ensure that sprockets-rails is at least v2.3.2.
+gem 'sprockets-rails', :require => 'sprockets/railtie'
+
+# Bootstarp pide: Bootstrap tooltips and popovers depend on popper.js for positioning.
+gem 'popper_js', '~> 1.14.3'
+
+# Cross-Origin Read Blocking (CORB) blocked cross-origin
+gem 'rack-cors', require: 'rack/cors'
+
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

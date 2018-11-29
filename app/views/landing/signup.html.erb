@@ -1,0 +1,35 @@
+<%= javascript_include_tag 'funciones', 'data-turbolinks-track': 'reload' %>
+
+<div class="container bg-img-5 bg-full text-center">
+  <div class="backdrop"></div>
+  <div class="login-form-container" id="login-form" style="background-color: #ffffff94;">
+    <div class="login-form-content">
+      <br/><br/><br/>
+      <div class="login-form-header">
+      <h1 class="texto_login">Bienvenidos a Bogotáapp</h1>
+        <div class="logo">
+            <%= image_tag("bogotaapp_logo_mano1.png", :alt => "Bogotáapp", style:"height: 130px; width: 130px;") %>
+        </div>
+        <h2 class="texto_login">Crea tu Cuenta, paso 1 de 2</h2>
+      </div>
+      <form method="post" action="" class="login-form form_login">
+        <div class="input-container">
+            <i class="fa fa-envelope">Número de Teléfono Celular: </i>
+            <br/>
+            +57 
+            <input type="text" class="input" id="celular" name="celular" placeholder="3001234657" />
+        </div>
+        <br/>
+        <div class="input-container">
+            <i class="fa fa-lock">Correo Electrónico</i>
+            <br/>
+            <input type="text"  id="cedula" class="input" name="password" placeholder="alguien@dominio.com" size="60" />
+            <i id="show-password" class="fa fa-eye"></i>
+        </div>
+        <br/>
+        <%= link_to 'Validar mis datos', nameapi_path(), {:style=>'font-size: 30px;', :class => "btn btn-lg btn-primary "} %>
+        <br/><br/>
+      </form>
+    </div>
+  </div>
+</div>

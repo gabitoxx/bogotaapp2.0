@@ -1,0 +1,153 @@
+<%= javascript_include_tag 'funciones', 'data-turbolinks-track': 'reload' %>
+
+<div class="container bg-img-6 bg-full text-center">
+  <div class="backdrop"></div>
+  <div class="login-form-container" id="login-form" style="background-color: #ffffff94;">
+    <div class="login-form-content">
+      <br/><br/><br/>
+      <div class="login-form-header">
+      <h1 class="texto_login">Bienvenidos a Bogotáapp</h1>
+        <div class="logo">
+            <%= image_tag("bogotaapp_logo_mano1.png", :alt => "Bogotáapp", style:"height: 130px; width: 130px;") %>
+        </div>
+        <h2 class="texto_login">Creación de tu Cuenta 2 de 2</h2>
+      </div>
+      <form method="post" action="" class="login-form form_login">
+        <div class="row">
+          <div class="col-sm-6 input-container">
+              <i class="fa fa-lock">Nombres</i>
+              <br/>
+              <input type="password" id="password1" class="input" name="password1" placeholder="Uno o tus dos nombres" style="font-size: 16px;" size="30" />
+              <i id="show-password" class="fa fa-eye"></i>
+          </div>
+          <br/>
+          <div class="col-sm-6 input-container">
+              <i class="fa fa-lock">Apellidos</i>
+              <br/>
+              <input type="password" id="password1" class="input" name="password1" placeholder="Apellidos" style="font-size: 16px;" size="30" />
+              <i id="show-password" class="fa fa-eye"></i>
+          </div>
+        </div>
+        <br/>
+        <div class="row">
+          <div class="col-sm-6 input-container">
+              <i class="fa fa-lock">Ingresa una nueva contraseña</i>
+              <br/>
+              <input type="password"  id="password1" class="input" name="password1" placeholder="********" style="font-size: 16px;" size="30" />
+              <i id="show-password" class="fa fa-eye"></i>
+          </div>
+          <br/>
+          <div class="col-sm-6 input-container">
+              <i class="fa fa-lock">Repite la contraseña</i>
+              <br/>
+              <input type="password"  id="password2" class="input" name="password2" placeholder="********" style="font-size: 16px;" size="30" />
+              <i id="show-password" class="fa fa-eye"></i>
+          </div>
+        </div>
+        <br/>
+        <div class="input-container">
+            <i class="fa fa-lock">Eligue la Localidad donde resides*</i>
+            <br/>
+            <select style="font-size: 16px;">
+                <option>-- elige una Localidad --</option>
+                <option>Antonio Nariño</option>
+              	<option>Barrios Unidos</option>
+        				<option>Bosa</option>
+        				<option>Ciudad Bolívar</option>
+        				<option>Chapinero</option>
+        				<option>Engativá</option>
+        				<option>Fontibón</option>
+        				<option>Kennedy</option>
+        				<option>La Candelaria</option>
+        				<option>Los Mártires</option>
+        				<option>Puente Aranda</option>
+        				<option>Rafael Uribe Uribe</option>
+        				<option>San Cristóbal</option>
+        				<option>Santa Fe</option>
+        				<option>Suba</option>
+        				<option>Sumapaz</option>
+        				<option>Teusaquillo</option>
+        				<option>Tunjuelito</option>
+        				<option>Usaquén</option>
+        				<option>Usme</option>
+            </select>
+            <br/>
+            <h6>* de esta Localidad serán todas tus Notificaciones, Amigos, Noticias, Info y más...</h6>
+        </div>
+        <br/>
+        <div class="input-container">
+            <i class="fa fa-lock">Eligue una UPZ de tu Localidad (opcional)</i>
+            <br/>
+            <select style="font-size: 16px;">
+                <option>-- elige una UPZ --</option>
+                <option>Ciudad Montes</option>
+                <option>Muzú</option>
+                <option>Puente Aranda</option>
+                <option>San Rafael</option>
+                <option>Zona Industrial</option>
+            </select>
+            <br/>
+            <h6>si seeccionas una UPZ, los Mensajes, Eventos, Convocatorias y Denuncias de esta UPZ serán priorizadas para mostrarte lo más cercano a tí. 
+              <br/>
+              <a href="https://es.wikipedia.org/wiki/Unidades_de_Planeamiento_Zonal" target="_blank">
+               Si no sabes qué es una UPZ visita la Wiki
+              </a>
+            </h6>
+        </div>
+        <br/>
+        <div class="input-container">
+            <i class="fa fa-lock">Ingresa el código que te enviamos por mensaje de texto a tu celular</i>
+            <br/>
+            <input type="text" id="sms_code" class="input text-center" name="sms_code" placeholder="ABC123"/>
+            <i id="show-password" class="fa fa-eye"></i>
+        </div>
+        <br/>
+        <br/>
+        <%= link_to 'Listo, quiero ingresar', {:controller => 'home', :action => 'index'}, {:style=>'font-size: 30px;', :class => "btn btn-lg btn-primary "} %>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <br/><br/>
+        <!-- span style="cursor: pointer;" onclick="javascript:whySignUp();">
+          <%= image_tag("question.png", :alt => "Bogotáapp", style:"height: 40px; width: 40px;") %>
+          <br/>
+          <span style="font-size: 12px;">¿Por qué me piden estos datos?</span>
+        </span -->
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Trigger the modal with a button -- 
+<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button -->
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body text-center">
+      	<%= image_tag("loading_spinner.gif", :alt => "loading...", style:"height: 80px; width: 80px;") %>
+      	<br/>
+        <p>Enviando Código de Validación a su Celular...</p>
+      </div>
+      <div class="modal-footer">
+        <!-- button type="button" class="btn btn-default" data-dismiss="modal">Close</button -->
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<script>
+	$(document).ready(function(){
+		$('#myModal').modal('show');
+		setTimeout(function(){
+			//alert("Hello"); 
+			$('#myModal').modal('hide');
+		}, 3000);
+	});
+</script>

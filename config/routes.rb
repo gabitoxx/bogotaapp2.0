@@ -1,6 +1,15 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  root 'welcome#index'
-  
+  #Apunta a LandingController - root es la pagina raíz
+  root to: 'landing#index'
+
+  get 'signup', to: 'landing#signup'
+  get 'nameapi', to: 'landing#nameapi'
+
+  # generado con el comando en cmd: rails g controller welcome index
+  get 'welcome/index'
+
+  # La 1ra página una vez logueado el usuario
+  get 'home/index'
 end

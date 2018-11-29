@@ -1,0 +1,92 @@
+<%= javascript_include_tag('funciones') %> 
+
+<div class="container">
+
+  <%= render 'header' %>
+
+  <ul class="nav nav-tabs text-center">
+    <li class="active">
+      <a data-toggle="tab" href="#timeline" id="tab1">
+        <%= image_tag("timeline_tab.png", :alt => "Bogotáapp", style:"height: 50px; width: 50px;") %>
+        <br/>
+        Mensajes
+      </a>
+    </li>
+    <li>
+      <a data-toggle="tab" href="#services">
+        <%= image_tag("services_tab.png", :alt => "Bogotáapp", style:"height: 50px; width: 50px;") %>
+        <br/>
+        Anuncios
+      </a>
+    </li>
+    <li>
+      <a data-toggle="tab" href="#events">
+        <%= image_tag("calendar_tab.png", :alt => "Bogotáapp", style:"height: 50px; width: 50px;") %>
+        <br/>
+        Eventos
+      </a>
+    </li>
+    <li><a data-toggle="tab" href="#infoGov">
+      <%= image_tag("info_tab.png", :alt => "Bogotáapp", style:"height: 50px; width: 50px;") %>
+        <br/>
+        InfoLocal
+      </a>
+    </li>
+    <li><a data-toggle="tab" href="#new-message">
+      <%= image_tag("create_message_tab.png", :alt => "Bogotáapp", style:"height: 50px; width: 50px;") %>
+        <br/>
+        Crea tus mensajes
+      </a>
+    </li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="timeline" class="tab-pane fade in active">
+      <%= render 'timeline' %>
+    </div>
+    <div id="services" class="tab-pane fade">
+      <%= render 'services' %>
+    </div>
+    <div id="events" class="tab-pane fade">
+      <%= render 'eventos' %>
+    </div>
+    <div id="infoGov" class="tab-pane fade">
+      <%= render 'infogov' %>
+    </div>
+    <div id="new-message" class="tab-pane fade">
+      <%= render 'newmsg' %>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div id="modalApp" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body text-center">
+        <%= image_tag("bogotaapp_points.png", id: 'bogotappCoin', :alt => "BogotappCoin", style:"height: 100px; width: 100px; visibility: hidden;") %>
+        <br/>
+        <span id="modalApp-message"></span>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Gracias!</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script type="text/javascript">
+    $("document").ready(function() {
+        
+        $("#tab1").trigger('click');
+
+        $('[data-toggle="tooltip"]').tooltip(); 
+
+    });
+</script>
